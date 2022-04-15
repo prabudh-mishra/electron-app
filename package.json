@@ -5,12 +5,17 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "dev": "nodemon --exec electron ."
+    "dev": "nodemon --exec electron .",
+    "build": "electron-builder"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "electron": "^18.0.3",
+    "electron-builder": "^23.0.3",
     "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "electron-window-state": "^5.0.3"
   }
 }

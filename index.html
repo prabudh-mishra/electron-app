@@ -7,5 +7,24 @@
       Hello World! This is an electron app updated by nodemon
     </h1>
     <a href="child.html" target="__blank">Child Page</a>
+
+    <hr/>
+
+    <button onclick="zoomIn()">Zoom In</button>
+    <button onclick="zoomOut()">Zoom Out</button>
+
+    <script>
+      const { webFrame } = require("electron");
+
+      function zoomIn() {
+        console.log('%c zoom in called...', 'color: green')
+        webFrame.setZoomFactor(webFrame.getZoomFactor() + 1)
+      }
+
+      function zoomOut() {
+        console.log('%c zoom out called...', 'color: red')
+        webFrame.setZoomFactor(webFrame.getZoomFactor() - 1)
+      }
+    </script>
   </body>
 </html>
